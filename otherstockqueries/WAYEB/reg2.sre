@@ -1,0 +1,1 @@
+#(;(^(IsEventTypePredicate(SELL),EQStr(name,MSFT),GT(price,26.0))["x"],^(IsEventTypePredicate(BUY),EQStr(name,ORCL),GT(price,11.14)),^(IsEventTypePredicate(BUY),EQStr(name,CSCO)),^(IsEventTypePredicate(SELL),EQStr(name,AMAT),GTE(price,18.92),LTAttr(price,"x")))){window:TIMESTAMP}{windowType:time}

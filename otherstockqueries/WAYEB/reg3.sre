@@ -1,0 +1,1 @@
+#(;(^(IsEventTypePredicate(SELL),GT(volume,4000.0))["x"],^(IsEventTypePredicate(BUY),GT(volume,4000.0)),^(IsEventTypePredicate(BUY),GT(volume,4000.0)),^(IsEventTypePredicate(SELL),GT(volume,4000.0),LTAttr(price,"x")))){partitionBy:name}{window:TIMESTAMP}{windowType:time}
