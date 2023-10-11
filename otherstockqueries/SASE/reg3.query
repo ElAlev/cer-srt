@@ -1,0 +1,9 @@
+PATTERN SEQ(SELL a, BUY b, BUY c, SELL d)
+WHERE skip-till-any-match
+AND a.volume > 4000
+AND b.volume > 4000
+AND c.volume > 4000
+AND d.volume > 4000
+AND d.price < a.price
+AND [name]
+WITHIN TIMESTAMP
