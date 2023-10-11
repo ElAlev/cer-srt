@@ -1,0 +1,24 @@
+PATTERN SEQ(LOAD a, LOAD+ b[], LOAD c, LOAD d, LOAD+ e[], LOAD f, LOAD g, LOAD+ h[], LOAD i)
+WHERE skip-till-any-match
+AND a.price > 236000
+AND a.household_id = 0
+AND b[i].price > 236000
+AND b[i].household_id = 2
+AND c.price > 236000
+AND c.household_id = 4
+AND c.price > a.price
+AND d.price > 236000
+AND d.household_id = 6
+AND e[i].price > 236000
+AND e[i].household_id = 9
+AND f.price > 236000
+AND f.household_id = 10
+AND f.price > d.price
+AND g.price > 236000
+AND g.household_id = 12
+AND h[i].price > 236000
+AND h[i].household_id = 14
+AND i.price > 236000
+AND i.household_id = 15
+AND i.price > g.price
+WITHIN TIMESTAMP
