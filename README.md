@@ -33,4 +33,4 @@ There are 7 scripts:
  - taxis_kleene_nested.py: Runs experiments on the taxis dataset for (relational) patterns with nested Kleene operators.
 
 Before running a script, you need to set the ```WORKING_FOLDER``` variable inside the script. It should point to your local folder where you have downloaded the becnhmark suite.
-You also need to unzip the ```streams.zip``` file and move the datasets to the appropriate folder (e.g., the ```taxi.stream``` file under the ```taxistream``` folder).
+You also need to unzip the zipped streams/datasets under each stream folder (e.g., ```stocks.7z``` under ```stockstream```).
