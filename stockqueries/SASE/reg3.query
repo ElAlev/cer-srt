@@ -1,0 +1,15 @@
+PATTERN SEQ(SELL a, BUY b, BUY c, SELL d, BUY e, BUY f, SELL g, BUY h, BUY i)
+WHERE skip-till-any-match
+AND a.name = INTC
+AND b.name = RIMM
+AND c.name = QQQ
+AND d.name = IPIX
+AND e.name = AMAT
+AND f.name = CSCO
+AND g.name = YHOO
+AND h.name = DELL
+AND i.name = ORCL
+AND c.price > a.price
+AND f.price > d.price
+AND i.price > g.price
+WITHIN TIMESTAMP
