@@ -1,0 +1,8 @@
+PATTERN SEQ(SELL a, BUY+ b[], BUY c)
+WHERE skip-till-any-match
+AND a.name = INTC
+AND b[i].name = RIMM
+AND b[i].price < 500
+AND c.name = QQQ
+AND c.price > a.price
+WITHIN TIMESTAMP
