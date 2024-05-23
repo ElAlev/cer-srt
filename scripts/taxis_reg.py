@@ -167,7 +167,7 @@ def run_systems():
 
 def run_sase(win_length, query, memorytest, timeout, max_events):
     return subprocess.run(['java', '-Xmx50G',
-                           '-jar', f'{WORKING_FOLDER}/jars/sasecorified.jar',
+                           '-jar', f'{WORKING_FOLDER}/jars/sase.jar',
                            f'{WORKING_FOLDER}/results/{TEST_NAME}/sase/sase_taxi_reg{query}_{win_length}.query',
                            f'{WORKING_FOLDER}/taxistream/taxi.stream',
                            f'{CONSUME}', f'{memorytest}', f'{True}', f'{PRINT}', f'{max_events}', f'{3}', f'{timeout}', f'{POSTPROCESS}'],
@@ -205,7 +205,7 @@ def run_wayeb(win_length, query, memorytest, timeout):
 
 def run_esper8(win_length, query, memorytest, timeout, max_events):
     return subprocess.run(['java', '-Xmx50G',
-                           '-jar', f'{WORKING_FOLDER}/jars/espercorified.jar',
+                           '-jar', f'{WORKING_FOLDER}/jars/esper.jar',
                            'taxi',
                            f'{WORKING_FOLDER}/results/{TEST_NAME}/esper/esper_taxi_reg{query}_{win_length}.query',
                            f'{WORKING_FOLDER}/taxistream/taxi.stream',
@@ -214,7 +214,7 @@ def run_esper8(win_length, query, memorytest, timeout, max_events):
 
 def run_flink(win_length, query, memorytest, timeout, max_events):
     return subprocess.run(['java', '-Xmx50G',
-                           '-jar', f'{WORKING_FOLDER}/jars/flinkcorified.jar',
+                           '-jar', f'{WORKING_FOLDER}/jars/flink.jar',
                            'taxi',
                             f'{WORKING_FOLDER}/taxistream/taxi.stream',
                             f'reg{query}', f'{win_length}', 'false', f'{timeout}', f'{memorytest}', f'{max_events}', f'{PRINT}', f'{POSTPROCESS}', f'{LIMIT}', f'{CONSUME}'],

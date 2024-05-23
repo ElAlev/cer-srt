@@ -173,7 +173,7 @@ def run_systems():
 
 def run_sase(win_length, query, memorytest, timeout, max_events):
     return subprocess.run(['java', '-Xmx50G',
-                           '-jar', f'{WORKING_FOLDER}/jars/sasecorified.jar',
+                           '-jar', f'{WORKING_FOLDER}/jars/sase.jar',
                            f'{WORKING_FOLDER}/results/{TEST_NAME}/sase/sase_stocks_reg{query}_{win_length}.query',
                            f'{WORKING_FOLDER}/stockstream/stocks.stream',
                            f'{CONSUME}', f'{memorytest}', f'{True}', f'{PRINT}', f'{max_events}', f'{1}', f'{timeout}', f'{POSTPROCESS}'],
@@ -211,7 +211,7 @@ def run_wayeb(win_length, query, memorytest, timeout, max_events):
 
 def run_esper8(win_length, query, memorytest, timeout, max_events):
     return subprocess.run(['java', '-Xmx50G',
-                           '-jar', f'{WORKING_FOLDER}/jars/espercorified.jar',
+                           '-jar', f'{WORKING_FOLDER}/jars/esper.jar',
                            'stock',
                            f'{WORKING_FOLDER}/results/{TEST_NAME}/esper/esper_stocks_reg{query}_{win_length}.query',
                            f'{WORKING_FOLDER}/stockstream/stocks.stream',
@@ -220,7 +220,7 @@ def run_esper8(win_length, query, memorytest, timeout, max_events):
 
 def run_flink(win_length, query, memorytest, timeout, max_events):
     return subprocess.run(['java', '-Xmx50G',
-                           '-jar', f'{WORKING_FOLDER}/jars/flinkcorified.jar',
+                           '-jar', f'{WORKING_FOLDER}/jars/flink.jar',
                            'stock',
                            f'{WORKING_FOLDER}/stockstream/stocks.stream',
                            f'o{query}', f'{win_length}', 'false', f'{timeout}', f'{memorytest}', f'{max_events}', f'{PRINT}', f'{POSTPROCESS}', f'{LIMIT}', f'{CONSUME}'],

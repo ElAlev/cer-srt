@@ -160,7 +160,7 @@ def run_systems():
 
 def run_sase(win_length, query, memorytest, timeout):
     return subprocess.run(['java', '-Xmx50G',
-                           '-jar', f'{WORKING_FOLDER}/jars/sasecorified.jar',
+                           '-jar', f'{WORKING_FOLDER}/jars/sase.jar',
                            f'{WORKING_FOLDER}/results/{TEST_NAME}/sase/sase_smarthomes_k{query}_{win_length}.query',
                            f'{WORKING_FOLDER}/smarthomestream/smarthomes.stream',
                            f'{CONSUME}', f'{memorytest}', f'{True}', f'{PRINT}', f'{max_events}', f'{2}', f'{timeout}',
@@ -200,7 +200,7 @@ def run_wayeb(win_length, query, memorytest, timeout):
 
 def run_esper8(win_length, query, memorytest, timeout):
     return subprocess.run(['java', '-Xmx50G',
-                           '-jar', f'{WORKING_FOLDER}/jars/espercorified.jar',
+                           '-jar', f'{WORKING_FOLDER}/jars/esper.jar',
                            'smart',
                            f'{WORKING_FOLDER}/results/{TEST_NAME}/esper/esper_smarthomes_k{query}_{win_length}.query',
                            f'{WORKING_FOLDER}/smarthomestream/smarthomes.stream',
@@ -209,7 +209,7 @@ def run_esper8(win_length, query, memorytest, timeout):
 
 def run_flink(win_length, query, memorytest, timeout):
     return subprocess.run(['java', '-Xmx50G',
-                           '-jar', f'{WORKING_FOLDER}/jars/flinkcorified.jar',
+                           '-jar', f'{WORKING_FOLDER}/jars/flink.jar',
                            'smart',
                             f'{WORKING_FOLDER}/smarthomestream/smarthomes.stream',
                             f'k{query}', f'{win_length}', 'false', f'{timeout}', f'{memorytest}', f'{max_events}', f'{PRINT}', f'{POSTPROCESS}', f'{LIMIT}', f'{CONSUME}'],

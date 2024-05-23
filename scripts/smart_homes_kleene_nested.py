@@ -168,7 +168,7 @@ def run_wayeb(win_length, query, memorytest, timeout):
 
 def run_esper8(win_length, query, memorytest, timeout):
     return subprocess.run(['java', '-Xmx50G',
-                           '-jar', f'{WORKING_FOLDER}/jars/espercorified.jar',
+                           '-jar', f'{WORKING_FOLDER}/jars/esper.jar',
                            'smart',
                            f'{WORKING_FOLDER}/results/{TEST_NAME}/esper/esper_smarthomes_kn{query}_{win_length}.query',
                            f'{WORKING_FOLDER}/smarthomestream/smarthomes.stream',

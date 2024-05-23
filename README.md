@@ -13,8 +13,10 @@ It has been adapted appropriately so that the engines can run relational pattern
 
 ## Building the systems
 
-Under the ```jars``` folder, you may find the executables used to run the experiments presented in the paper.
 Under the ```sources``` folder, you may find the source code used to create the executables.
+Under the ```jars``` folder, you may find the executables used to run the experiments presented in the paper for Wayebm, SASE and FlinkCEP.
+Esper's license does not allow for re-distribution. 
+Therefore, you need to create an executable jar for Esper yourself, by using the relevant code under the ```sources``` folder and linking it to Esper.
 If you wish to modify the behavior of the engines, you may do so and then create a new fat jar.
 
 ## Running the experiments

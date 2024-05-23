@@ -173,7 +173,7 @@ def run_wayeb(win_length, query, memorytest, timeout):
 
 def run_esper8(win_length, query, memorytest, timeout, max_events):
     return subprocess.run(['java', '-Xmx50G',
-                           '-jar', f'{WORKING_FOLDER}/jars/espercorified.jar',
+                           '-jar', f'{WORKING_FOLDER}/jars/esper.jar',
                            'taxi',
                            f'{WORKING_FOLDER}/results/{TEST_NAME}/esper/esper_taxi_kn{query}_{win_length}.query',
                            f'{WORKING_FOLDER}/taxistream/taxi.stream',
