@@ -1,6 +1,6 @@
 # Complex Event Recognition with Symbolic Register Transducers
 
-This repository contains the code needed to reproduce the experiments found in the paper Complex Event Recognition with Symbolic Register Transducers.
+This repository contains the code needed to reproduce the experiments found in the paper Complex Event Recognition with Symbolic Register Transducers, to be presented at VLDB2024.
 The original source code has been obtained from [https://github.com/CORE-cer/CORE-experiments](https://github.com/CORE-cer/CORE-experiments).
 It has been adapted appropriately so that the engines can run relational patterns.
 
